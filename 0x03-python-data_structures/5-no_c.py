@@ -1,5 +1,5 @@
 #!/usr/bin/pyhton3
-# Author - MoOka
+# Owned by MoOka
 def no_c(my_string):
     new_string = ""
     for character in range(len(my_string)):
