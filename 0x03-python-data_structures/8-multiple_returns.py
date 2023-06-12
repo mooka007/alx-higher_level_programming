@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Author - MoOka
-def multiple_returns(sentence):
+def multipe_returns(sentence):
     if sentence == "":
         char = None
     else:
