@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Author - MoOka
 def print_sorted_dictionary(a_dictionary):
-    idd = list(a_dictionary.idd())
-    idd.sort()
-    for key in idd:
+    keys = list(a_dictionary.keys())
+    keys.sort()
+    for key in keys:
         print("{}: {}".format(key, a_dictionary[key]))
