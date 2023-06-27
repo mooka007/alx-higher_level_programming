@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # Author - MOOka
-"""class Square that defines a square"""
+"""Defines a square"""
 
 
 class Sqaure:
-    """class Square that defines a square"""
+    """Represent a square"""
 
     def __init__(self, size):
         """Initialize a new Square.
