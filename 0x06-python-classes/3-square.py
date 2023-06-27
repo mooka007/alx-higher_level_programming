@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # Author - MoOka
+"""class Square that defines a square"""
+
 
 class Square:
     """class Square that defines a square"""
