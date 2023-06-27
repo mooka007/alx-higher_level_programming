@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-# Author -MoOka
+#!/usr/bin/python3i
+# Author - MoOka
 """class Square that defines a square"""
 
 
@@ -18,11 +18,13 @@ class Square:
     @size.setter
     def size(self, value):
         """property setter to set it"""
-        if type(size) != int:
-            raise TypeError("size must be integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+        if type(value) is int:
+            if value >= 0:
+                self.__size = value
+            else:
+                raise ValueError("size must be >= 0")
+        else:
+            raise TypeError("size must be an integer")
 
     def area(self):
         """Public instance method that returns the current square area"""
