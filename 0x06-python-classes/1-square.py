@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-# Author - MOOka
-"""Defines a square"""
+
+"""defines a class square"""
 
 
-class Sqaure:
-    """Represent a square"""
+class Square:
+    """creates a squres"""
 
     def __init__(self, size):
-        """Initialize a new Square.
+        """present the instance attribute."""
 
-        Args:
-            size (int): The size of the new square.
-        """
         self.__size = size
