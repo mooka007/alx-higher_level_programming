@@ -4,19 +4,15 @@
 
 
 class Square:
-    """class Square that defines a square"""
-    __size = None
-
+    """class variable size"""
     def __init__(self, size=0):
-        """Instation with optional size"""
-        if type(size) is int:
-            if size >= 0:
-                self.__size = size
-            else:
-                raise ValueError("Size must Be >= 0")
-        else:
+        """initialize size"""
+        if type(size) != int:
             raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
-        def area(self):
-            """Public instance method area"""
-            return self.__size * self.__size
+    def area(self):
+        """Define area"""
+        return self.__size * self.__size
