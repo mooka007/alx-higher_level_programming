@@ -14,7 +14,7 @@ class Sqaure:
     def size(self):
         """property to retrieve it"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if type(value) is int:
@@ -38,5 +38,3 @@ class Sqaure:
                 print("")
         else:
             print("")
-            
-
