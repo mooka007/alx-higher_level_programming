@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Author - MoOka
+# Author - MoOka
 
 """Function that return the list of available attributes and methods"""
 
