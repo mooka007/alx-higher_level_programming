@@ -17,9 +17,6 @@ if __name__ == '__main__':
                                .format(USER, PASS, DB), pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
-        first = session.query(State).first()
-        if first:
-            print("{}: {}".format(first.id, first.name))
-        else:
-            print("Nothing")
-        session.close()
+        update_state = session.query(State).filter(State.id == 2).first()
+        update_state.name = 'New Mexico'
+        session.commit()

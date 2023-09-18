@@ -17,9 +17,7 @@ if __name__ == '__main__':
                                .format(USER, PASS, DB), pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
-        first = session.query(State).first()
-        if first:
-            print("{}: {}".format(first.id, first.name))
-        else:
-            print("Nothing")
-        session.close()
+        add_state = State(name='Louisiana')
+        session.add(add_state)
+        session.commit()
+        print(add_state.id)

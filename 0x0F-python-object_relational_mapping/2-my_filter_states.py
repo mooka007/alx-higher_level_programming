@@ -1,29 +1,25 @@
 #!/usr/bin/python3
-"""
-takes in an argument and displays all values in the states
-table of hbtn_0e_0_usa where name matches the argument.
-"""
+""" Script that lists all states starting with N"""
 
 import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    """
-    Access to the database and get the states
-    from the database.
-    """
 
-    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
-                         passwd=argv[2], db=argv[3])
-
+    HOST = 'localhost'
+    PORT = 3306
+    MY_USER = argv[1]
+    MY_PSWD = argv[2]
+    MY_DB = argv[3]
+    NAME = argv[4]
+    db = MySQLdb.connect(host=HOST, user=MY_USER, password=MY_PSWD,
+                         db=MY_DB, port=PORT)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states \
-                WHERE name LIKE BINARY '{}' \
-                ORDER BY states.id ASC".format(argv[4]))
-
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id".format(NAME)
+    cur.execute(query)
+    row_query = cur.fetchall()
+    for rq_print in row_query:
+        if rq_print[1] == NAME:
+            print(rq_print)
     cur.close()
     db.close()
