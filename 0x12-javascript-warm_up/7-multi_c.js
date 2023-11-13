@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const num = parseInt(process.argv[2]);
-if (isNaN(num)) {
+const x = parseInt(process.argv[2]);
+if (isNaN(x)) {
 	console.log('Missing number of occurrences');
 } else {
 	jomla = "C if fun";
-	let x;
-	for (x = 0; x < num; x++) {
+	let y;
+	for (y = 0; y < x; y++) {
 		console.log(jomla);
 	}
 }
