@@ -5,4 +5,3 @@ const myVar2 = 'JavaScript is amazing';
 console.log(myVar0);
 console.log(myVar1);
 console.log(myVar2);
-
