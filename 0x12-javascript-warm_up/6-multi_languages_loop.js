@@ -1,6 +1,5 @@
 #!/usr/bin/node
-const table = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-let x;
-for ( x in table){
-	console.log(table[x]);
+const arrayStr = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (let i = 0; i < arrayStr.length; i++) {
+  console.log(arrayStr[i]);
 }
