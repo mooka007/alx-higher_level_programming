@@ -20,5 +20,3 @@ if __name__ = "__main__":
             print(roro)
     cur.close()
     db.close()
-
-
