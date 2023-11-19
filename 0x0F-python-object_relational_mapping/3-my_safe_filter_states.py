@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that lists all states starting with N """
+""" script that takes in arguments and displays all values """
 
 import MySQLdb
 from sys import argv
