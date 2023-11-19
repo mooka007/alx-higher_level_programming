@@ -8,7 +8,7 @@ if __name__ = '__main__':
 
     HOST = 'localhost'
     PORT = '3306'
-    MY_USR = argv[1]
+    MY_USER = argv[1]
     MY_PSWD = argv[2]
     MY_DB = argv[3]
     NAME = argv[4]
