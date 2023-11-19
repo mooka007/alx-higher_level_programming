@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-""" Script that lists all states starting with N """
+""" Script that lists all states starting with N"""
+
 import MySQLdb
 from sys import argv
 
-if __name__ = "__main__":
+if __name__ == '__main__':
+
     HOST = 'localhost'
     PORT = 3306
     MY_USER = argv[1]
@@ -12,11 +14,11 @@ if __name__ = "__main__":
     db = MySQLdb.connect(host=HOST, user=MY_USER, password=MY_PSWD,
                          db=MY_DB, port=PORT)
     cur = db.cursor()
-    query = "SELECT * FROM states ORDER BY id"
+    query = 'SELECT * FROM states ORDER BY id'
     cur.execute(query)
-    reo = cur.fetchall()
-    for roro in reo:
-        if roro[1][0] == 'N':
-            print(roro)
+    rowquery = cur.fetchall()
+    for rqprint in rowquery:
+        if rqprint[1][0] == 'N':
+            print(rqprint)
     cur.close()
     db.close()
