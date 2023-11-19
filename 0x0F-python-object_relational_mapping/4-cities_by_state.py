@@ -4,7 +4,7 @@
 import MySQLdb
 from sys import argv
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 
     HOST = 'localhost'
     PORT = 3306
@@ -25,3 +25,4 @@ if __name__ = '__main__':
         print(rq_print)
     cur.close()
     db.close()
+
