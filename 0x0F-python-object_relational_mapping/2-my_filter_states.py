@@ -5,7 +5,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ = '__main__':
-    
+
     HOST = 'localhost'
     PORT = '3306'
     MY_USER = argv[1]
