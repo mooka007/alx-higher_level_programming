@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Script that takes in an argument and displays all values"""
+""" Script that lists all states starting with N"""
 
 import MySQLdb
 from sys import argv
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 
     HOST = 'localhost'
-    PORT = '3306'
+    PORT = 3306
     MY_USER = argv[1]
     MY_PSWD = argv[2]
     MY_DB = argv[3]
@@ -18,8 +18,9 @@ if __name__ = '__main__':
     query = "SELECT * FROM states WHERE name = '{}' ORDER BY id".format(NAME)
     cur.execute(query)
     row_query = cur.fetchall()
-    for r_print in row_query:
-        if r_print[1] == NAME:
-            print(r_print)
+    for rq_print in row_query:
+        if rq_print[1] == NAME:
+            print(rq_print)
     cur.close()
     db.close()
+
