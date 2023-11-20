@@ -21,4 +21,3 @@ if __name__ == '__main__':
     session = Session()
     for states in session.query(State):
         print("{}: {}".format(states.id, states.name))
-
