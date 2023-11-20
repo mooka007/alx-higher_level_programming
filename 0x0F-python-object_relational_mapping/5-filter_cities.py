@@ -25,4 +25,3 @@ if __name__ == '__main__':
     print(", ".join(list))
     cur.close()
     db.close()
-

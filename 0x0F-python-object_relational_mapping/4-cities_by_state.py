@@ -25,4 +25,3 @@ if __name__ == '__main__':
         print(rq_print)
     cur.close()
     db.close()
-
